@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>teste formulario</title>
+</head>
+<body>
+    <form action="" method="POST" id="form">
+        <h1>LocalStorage</h1>
+
+        
+        <input type="text" placeholder="digite seu nome" id="nome">
+
+        <button id="btnEnviar" onclick="capturaDados()">Enviar</button>
+    </form>
+
+    <script>
+        const capturaDados = () => {
+
+            event.preventDefault();
+            let nome = document.querySelector('#nome').value;
+
+            if(nome) {
+                const dataForm = {nome};
+                localStorage.setItem('dataForm', JSON.stringify(dataForm));
+                location.reload();
+            } 
+
+
+            return console.log(dataForm);
+        }
+
+        let userDataFormLocalStorage =  JSON.parse(localStorage.getItem('dataForm'));
+        console.log(userDataFormLocalStorage);
+
+        const div = document.createElement('div');
+        div.innerHTML = userDataFormLocalStorage.nome;
+        document.body.appendChild(div);
+    </script>
+</body>
+</html>
