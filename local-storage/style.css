@@ -1,0 +1,31 @@
+* {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 16px;
+}
+html {
+    box-sizing: border-box;
+    width: 600px;
+    margin: 0 auto 0 auto;
+    text-align: center;
+}
+
+#form > h1 {
+    font-size: 32px;
+    padding: 16px;
+    color: #2e60be;
+}
+
+button {
+    color: white;
+    background-color: #2e60be;
+}
+
+div {
+    font-size: 1.5rem;
+    padding: 16px;
+    margin: 16px;
+    display: inline-block;
+    border: 1px solid black;
+    border-radius: 16px;
+}
+
